@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <meta name="description" content="A system for registering student details with edit and delete functionalities.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>Welcome to our student registration system. Register your details below.</p>
+    </header>
+
+    <main>
+        <section id="registrationForm">
+            <h2>Student Registration Form</h2>
+            <form id="studentForm">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" placeholder="Enter the Student Name" required>
+                
+                <label for="studentID">Student ID:</label>
+                <input type="number" id="studentID" placeholder="Enter the Student ID" maxlength="5" pattern="[0-9]{10}" required>
+                
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" placeholder="Enter the Student Email ID" required>
+                
+                <label for="contactNo">Contact Number:</label>
+                <input type="text" id="contactNo" placeholder="Enter the Student Phone no" name="phone" maxlength="10" pattern="[0-9]{10}" title="Please enter exactly 10 digits" required>
+               
+
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="studentRecords">
+            <h2>Registered Students</h2>
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Email ID</th>
+                        <th>Contact Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Student records will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
